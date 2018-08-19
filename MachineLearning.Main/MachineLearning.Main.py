@@ -5,6 +5,7 @@ from scipy.spatial import distance
 from enum import Enum
 from scipy.spatial import distance
 import subprocess
+import MachineLearningcsv as csvreadwrite
 
 '''
 the best way in which the check if the new element is of positive or negative. 
@@ -18,7 +19,7 @@ Remember that there can be issues of having false positive and false negatives, 
 
 
 def euc(a,b):
-    return distance.euclidean(a,b)
+    return distance.euclidean(a,b) #this figures out the distance of C^2
 
 class ScrappyKNN():
     def fit(self, X_train, y_train):
@@ -80,7 +81,11 @@ total = a+b
 print(a)
 print(b)
 print(total)
+print()
+print("-------------------")
 
+data = csvreadwrite.importdata()
+result = getattr(data, "getcsvdata")
 
 
 writer = tf.summary.FileWriter('.')
