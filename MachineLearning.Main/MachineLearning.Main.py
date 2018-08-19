@@ -5,7 +5,7 @@ from scipy.spatial import distance
 from enum import Enum
 from scipy.spatial import distance
 import subprocess
-import MachineLearningcsv as csvreadwrite
+from MachineLearningcsv import importdata
 
 '''
 the best way in which the check if the new element is of positive or negative. 
@@ -84,8 +84,8 @@ print(total)
 print()
 print("-------------------")
 
-data = csvreadwrite.importdata()
-result = getattr(data, "getcsvdata")
+data = importdata()
+data.getcsvdata()
 
 
 writer = tf.summary.FileWriter('.')
